@@ -1,34 +1,14 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# NextJS Introduction
 
-## Getting Started
+## What the fuck is different between Framework vs Library?
 
-First, run the development server:
+기본적인 프레임워크와 라이브러리의 차이는 다음과 같다.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+> > "내가 뭔가를 호출해 버무린다" = 라이브러리 (ex: jQuery, React, etc...)
+> > "누군가가 나를 (내 코드를)호출해 버무린다" = 프레임워크 (ex: Spring, Next 등등)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   프레임워크에서는 내가 적절한 위치에 코드를 잘 적어만 주면 알아서 이 코드들을 불러와 적재적소에 배치해주며, 뭐든 동작하게 해준다.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+-   반면에 라이브러리에서는 내가 필요할 때 불러와 사용하는 식으로, 마치 jQuery, React 처럼 얘네가 없어도 뭐 대충 아무튼 페이지를 바닐라로 조지든 자바기반이면 jsp를 조지든 할 수가 있다.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   넥스트JS 는 리액트 기반 **프레임워크**이다. 이 말인 즉,
