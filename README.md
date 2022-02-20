@@ -1,6 +1,6 @@
 # NextJS Introduction
 
-## What the fuck is difference between Framework vs Library?
+### "What the fuck is difference between Framework vs Library?"
 
 기본적인 프레임워크와 라이브러리의 차이는 다음과 같다.
 
@@ -14,3 +14,5 @@
 -   근데 프레임워크에서는 이러면 혼난다. 기본적으로 정해진 규칙대로 작성해줘야만 오류없이 최고의 효율로 앱이 동작하도록 해주는 엄격한 형아다.
 
 -   넥스트JS 는 리액트 기반 **프레임워크**이다. 우리가 평소에 보던 리액트에서는 index.js에서 ReactDOM.render() 안에 뭔가의 페이지를 감싸서 작동시켰는데, 이형은 그런거 없다. 이 형이 원하는대로 pages 폴더에 뭐든 넣고 하는 등의 규칙만 지켜주면 프레임워크가 알아서 내 코드들을 불러와 잘 지지고 볶아준다.
+
+-   넥스트JS 는 **SSR**를 지원한다. CRA의 경우 인터넷 속도가 느리면 흰창이 장시간 보이고 극혐이었는데, NextJS의 서버사이드 렌더링을 통해 최소한 React.js 가 불러와지기 전에도 기본적인 HTML페이지의 틀은 보여준다.
