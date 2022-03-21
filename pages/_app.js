@@ -4,19 +4,13 @@
  * Next는 페이지들을 렌더링 하기전에 무적권 app.js부터 본다. 그 다음 다른페이지를 읽는다.
  */
 
-import { NavBar } from '../components/NavBar';
+import Layout from '../components/Layout';
 import '../styles/globals.css';
 
 export default function App({ Component, pageProps }) {
 	return (
-		<>
-			<NavBar />
+		<Layout>
 			<Component {...pageProps} />
-			<style jsx global>{`
-				a {
-					color: white;
-				}
-			`}</style>
-		</>
+		</Layout>
 	);
 }
