@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 export const NavBar = () => {
 	const router = useRouter();
-
+	// #2.1 Fetching Data 4:00 부터 보기
 	return (
 		<nav>
 			<img src='/vercel.svg' alt='vercel' />
