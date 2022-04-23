@@ -24,4 +24,29 @@
 import 'styles/globalFoo.css';
 ```
 
--   이러한 글로벌 CSS는 <App> 컴포넌트에서만 쓰라고 강제한다.
+-   이러한 글로벌 CSS는 <App> 안에서만 쓰라고 강제한다.
+-   다른 페이지에서 CSS를 먹이기 위해서는 아래와 같이 적용.
+
+```javascript
+// 모듈식
+import './thisPage.module.css'; // 일반적인 css파일처럼 적되, 이름만 xxxx.module.css 로.
+
+// <style> 태그 사용 (이 페이지에 대해서만)
+<style jsx>{`
+	a {
+		color: white;
+	}
+`}</style>;
+
+// <style> 태그 사용 (이 페이지에 대해서만)
+<style jsx global>{`
+	div {
+		display: flex;
+		flex-direction: row;
+		margin: auto;
+	}
+	a {
+		color: white;
+	}
+`}</style>;
+```
