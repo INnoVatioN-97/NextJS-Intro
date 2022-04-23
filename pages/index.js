@@ -3,11 +3,10 @@ import { NavBar } from '../components/NavBar';
 import Head from 'next/head'; //Next.js 에서 제공하는 기본적인 대가리 라이브러리.
 import HeadTitle from '../components/HeadTitle';
 
+const API_KEY = '60991f783f7003dd7cf77e357febbd35';
+
 export default function Home() {
-	const API_KEY = '60991f783f7003dd7cf77e357febbd35';
-
-	const [movies, setMovies] = useState([]);
-
+	const [movies, setMovies] = useState();
 	useEffect(() => {
 		(async () => {
 			const { results } = await (
@@ -15,7 +14,6 @@ export default function Home() {
 					`https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=ko`
 				)
 			).json();
-
 			console.log(results);
 			setMovies(results);
 		})();
@@ -24,7 +22,14 @@ export default function Home() {
 	return (
 		<div>
 			<HeadTitle title='Home' />
-			<h1 className='active'>Hello</h1>
+			{!movies && <h4>Loading...</h4>}
+			{movies?.map((movie) => {
+				return (
+					<div key={movie.id}>
+						<h4>{movie.original_title}</h4>
+					</div>
+				);
+			})}
 		</div>
 	);
 }
